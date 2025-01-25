@@ -89,10 +89,43 @@ class _loginScreenState extends State<loginScreen> {
                     Container(
                       child: ElevatedButton(
                         style: AppButtonStyle(),
-                        child: SuccessButtonChild('login'),
+                        child: SuccessButtonChild('Login'),
                         onPressed: () {
                           FormOnSubmit();
                         },
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+
+                    Container(
+                      alignment: Alignment.center,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 20),
+                          InkWell(
+                              onTap: (){
+                                Navigator.pushNamed(context, "/emailVerification");
+                              },
+                              child: Text('Forget Password?',style: Head7Text(colorLightGray),
+                              )
+                          ),
+
+                          SizedBox(height: 15),
+
+                          InkWell(
+                              onTap: (){
+                                Navigator.pushNamed(context, "/registration");
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("Don't have a account? ",style: Head7Text(colorDarkBlue)),
+                                  Text("Sign Up",style: Head7Text(colorGreen),)
+                                ],
+                              )
+                          )
+                        ],
                       ),
                     )
 

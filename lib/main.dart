@@ -12,7 +12,7 @@ import 'screen/onboarding/splashScreen.dart';
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   String? token = await ReadUserData('token');
-  if (token == null) {
+  if (token != null) {
     runApp(MyApp("/login"));
   }
 

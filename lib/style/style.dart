@@ -109,7 +109,7 @@ DecoratedBox AppDropDownStyle(child){
 
 SvgPicture ScreenBackground(context){
   return SvgPicture.asset(
-    'assets/images/background.svg',
+    'assets/images/screen-back.svg',
     alignment: Alignment.center,
     width: MediaQuery.of(context).size.width,
     height: MediaQuery.of(context).size.height,
